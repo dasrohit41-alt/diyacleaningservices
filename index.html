@@ -1,63 +1,820 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Diya Cleaning Services</title>
-<style>
-body{font-family:Arial;margin:0;background:#f5f5f5;color:#333}
-header{background:#0b6e4f;color:#fff;padding:30px;text-align:center}
-nav{background:#084c39;padding:12px;text-align:center}
-nav a{color:#fff;text-decoration:none;margin:0 10px}
-.hero,.section{max-width:1000px;margin:auto;padding:30px}
-.btn{display:inline-block;background:#0b6e4f;color:#fff;padding:10px 18px;text-decoration:none;border-radius:5px;margin:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
-footer{background:#222;color:#fff;text-align:center;padding:20px;margin-top:20px}
-</style></head>
-<body>
-<header><h1>Diya Cleaning Services</h1><p>Professional Cleaning Services</p></header>
-<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
-<div class="hero" id="home">
-<h2>Welcome</h2>
-<p>We provide professional home, office, sofa, bathroom, kitchen and water tank cleaning services.</p>
-<a class="btn" href="tel:9039826765">Call Now</a>
-<a class="btn" href="https://wa.me/919039826765">WhatsApp</a>
-</div>
-<div class="section" id="services">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card">Home Cleaning</div>
-<div class="card">Office Cleaning</div>
-<div class="card">Sofa Cleaning</div>
-<div class="card">Bathroom Cleaning</div>
-<div class="card">Kitchen Cleaning</div>
-<div class="card">Water Tank Cleaning</div>
-</div>
-</div>
-<div class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Phone: 9039826765</p>
-<p>Email: diyacleaning76@gmail.com</p>
-<p>Bhilai, Chhattisgarh</p>
-</div>
-<footer>© 2026 Diya Cleaning Services. All Rights Reserved.</footer>
-<section style="padding:40px;background:#ffffff;">
-<h2 style="text-align:center;">Why Choose Us?</h2>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diya Cleaning Services | Professional Cleaning for Homes & Offices</title>
+    <meta
+      name="description"
+      content="Diya Cleaning Services offers professional housekeeping, apartment cleaning, staircase cleaning, office cleaning, and more across residential and commercial spaces."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue: #1f5f8b;
+        --blue-dark: #124766;
+        --green: #2fa36b;
+        --green-light: #e8f7ee;
+        --cream: #f8fbff;
+        --text: #17323f;
+        --muted: #5f6f7a;
+        --shadow: 0 16px 45px rgba(18, 71, 102, 0.12);
+      }
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-<div style="background:#f5f5f5;padding:20px;border-radius:8px;text-align:center;">
-<h3>✔ Professional Staff</h3>
-<p>Experienced and trusted cleaning team.</p>
-</div>
+      html {
+        scroll-behavior: smooth;
+      }
 
-<div style="background:#f5f5f5;padding:20px;border-radius:8px;text-align:center;">
-<h3>✔ Affordable Price</h3>
-<p>Quality cleaning at reasonable rates.</p>
-</div>
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text);
+        background: linear-gradient(135deg, #f5fbff 0%, #ffffff 100%);
+        line-height: 1.6;
+      }
 
-<div style="background:#f5f5f5;padding:20px;border-radius:8px;text-align:center;">
-<h3>✔ Customer Satisfaction</h3>
-<p>Your satisfaction is our priority.</p>
-</div>
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-</div>
-</section></body></html>
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1150px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.9rem 1.3rem;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--blue), var(--green));
+        color: #fff;
+        box-shadow: 0 12px 30px rgba(31, 95, 139, 0.2);
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: var(--blue-dark);
+        border: 1px solid #dfeef6;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(31, 95, 139, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+      }
+
+      .brand {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--blue-dark);
+      }
+
+      .brand span {
+        color: var(--green);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.4rem;
+        align-items: center;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: var(--blue);
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.4rem;
+        background: none;
+        border: none;
+        color: var(--blue-dark);
+      }
+
+      .hero {
+        padding: 4.5rem 0 3.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: auto -8rem -8rem auto;
+        width: 24rem;
+        height: 24rem;
+        background: radial-gradient(circle, rgba(47, 163, 107, 0.2), transparent 65%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        color: var(--blue-dark);
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.03rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .hero-badges span {
+        background: var(--green-light);
+        color: var(--green);
+        padding: 0.55rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .hero-card {
+        background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+        color: #fff;
+        border-radius: 1.6rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-card::after {
+        content: '';
+        position: absolute;
+        inset: auto -2rem -2rem auto;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .hero-card ul {
+        list-style: none;
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .hero-card li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 500;
+      }
+
+      .hero-card .icon {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        flex-shrink: 0;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title span {
+        color: var(--green);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 0.8rem;
+      }
+
+      .section-title h2 {
+        font-size: clamp(1.7rem, 3vw, 2.25rem);
+        color: var(--blue-dark);
+      }
+
+      .section-title p {
+        color: var(--muted);
+        max-width: 700px;
+      }
+
+      .about-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .about-card,
+      .info-card,
+      .service-card,
+      .why-card,
+      .gallery-card {
+        background: #fff;
+        border: 1px solid #eaf3f8;
+        border-radius: 1.3rem;
+        padding: 1.35rem;
+        box-shadow: var(--shadow);
+      }
+
+      .about-list {
+        display: grid;
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+
+      .about-list div {
+        display: flex;
+        gap: 0.7rem;
+        align-items: start;
+      }
+
+      .check {
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      .stats {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .stats .item {
+        background: var(--green-light);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .stats strong {
+        display: block;
+        font-size: 1.35rem;
+        color: var(--blue-dark);
+      }
+
+      .services-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .service-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 45px rgba(18, 71, 102, 0.15);
+      }
+
+      .service-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(31, 95, 139, 0.12), rgba(47, 163, 107, 0.14));
+        color: var(--blue);
+        font-size: 1.2rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.4rem;
+        color: var(--blue-dark);
+      }
+
+      .service-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .why-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .why-card h3 {
+        color: var(--blue-dark);
+        margin-bottom: 0.4rem;
+      }
+
+      .why-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .gallery-card img {
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .gallery-card .content {
+        padding: 1rem 1.2rem 1.2rem;
+      }
+
+      .gallery-card h3 {
+        margin-bottom: 0.4rem;
+        color: var(--blue-dark);
+      }
+
+      .gallery-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: 0.95fr 1.05fr;
+      }
+
+      .contact-card {
+        background: linear-gradient(135deg, var(--cream), #ffffff);
+        border: 1px solid #eaf3f8;
+        border-radius: 1.3rem;
+        padding: 1.4rem;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .contact-list div {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+      }
+
+      form {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #dcecf5;
+        border-radius: 0.9rem;
+        padding: 0.9rem 1rem;
+        font: inherit;
+        background: #fff;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      footer {
+        background: var(--blue-dark);
+        color: rgba(255, 255, 255, 0.9);
+        padding: 1.3rem 0;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .why-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #fff;
+          flex-direction: column;
+          padding: 1rem 1rem 1.2rem;
+          border-bottom: 1px solid #e8f2f8;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .stats,
+        .services-grid,
+        .why-grid,
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a href="#home" class="brand">Diya <span>Cleaning Services</span></a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#why">Why Choose Us</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary" href="tel:9770010905">Call Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <h1>Trusted cleaning professionals for homes, flats, offices, and common spaces.</h1>
+            <p>
+              Diya Cleaning Services delivers polished, reliable, and efficient cleaning solutions with trained manpower,
+              modern practices, and a commitment to spotless results every time.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="tel:9770010905">📞 Call Now</a>
+              <a class="btn btn-secondary" href="https://wa.me/919039826765?text=Hello%20Diya%20Cleaning%20Services%2C%20I%20would%20like%20a%20quote." target="_blank" rel="noreferrer">💬 WhatsApp Now</a>
+            </div>
+            <div class="hero-badges">
+              <span>24/7 Support</span>
+              <span>Professional Staff</span>
+              <span>Affordable Packages</span>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <h3>Why clients choose us</h3>
+            <ul>
+              <li><span class="icon">✓</span> Experienced housekeeping manpower</li>
+              <li><span class="icon">✓</span> Attention to detail in every space</li>
+              <li><span class="icon">✓</span> Timely service with consistent quality</li>
+              <li><span class="icon">✓</span> Flexible support for residential and commercial needs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-title reveal">
+            <span>About Us</span>
+            <h2>Professional cleaning with a personal touch</h2>
+            <p>
+              Diya Cleaning Services is a trusted name for reliable cleaning support, combining skilled manpower with a focus on hygiene, presentation, and customer satisfaction.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card reveal">
+              <p>
+                We provide tailored cleaning solutions for residential complexes, apartments, offices, and shared community spaces.
+                Our team works with care, discipline, and efficiency to keep every area fresh, safe, and welcoming.
+              </p>
+              <div class="about-list">
+                <div><span class="check">✓</span><span>Dependable team for recurring and one-time cleaning needs</span></div>
+                <div><span class="check">✓</span><span>Strong focus on cleanliness, hygiene, and presentation</span></div>
+                <div><span class="check">✓</span><span>Flexible service options designed around your schedule</span></div>
+              </div>
+            </div>
+
+            <div class="info-card reveal">
+              <div class="stats">
+                <div class="item">
+                  <strong>100+</strong>
+                  <span>Happy Clients</span>
+                </div>
+                <div class="item">
+                  <strong>10+</strong>
+                  <span>Years of Care</span>
+                </div>
+                <div class="item">
+                  <strong>24/7</strong>
+                  <span>Service Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-title reveal">
+            <span>Our Services</span>
+            <h2>Comprehensive cleaning solutions for every space</h2>
+            <p>From everyday home upkeep to specialized deep cleaning, we offer dependable support for both residential and commercial environments.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="service-icon">🏠</div>
+              <h3>Housekeeping Manpower Supply</h3>
+              <p>Skilled housekeeping staff for daily support and maintenance.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🧼</div>
+              <h3>Apartment Cleaning</h3>
+              <p>Thorough cleaning for living rooms, bedrooms, kitchens, and bathrooms.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🗑️</div>
+              <h3>Garbage Collection from Flats</h3>
+              <p>Reliable disposal support for residential buildings and complexes.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🪜</div>
+              <h3>Staircase Cleaning</h3>
+              <p>Neat and hygienic cleaning for shared stairs and entryways.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🛗</div>
+              <h3>Lift Cleaning</h3>
+              <p>Spotless, polished lift interiors and touchpoints.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🏢</div>
+              <h3>Common Area Cleaning</h3>
+              <p>Well-maintained corridors, lobbies, and shared community zones.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🛣️</div>
+              <h3>Road Cleaning</h3>
+              <p>Support for civic and site maintenance with dedicated cleaning crews.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">💼</div>
+              <h3>Office Cleaning</h3>
+              <p>Professional cleaning for workspaces, common areas, and facilities.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🏡</div>
+              <h3>Home Cleaning</h3>
+              <p>Regular and deep cleaning for families seeking a spotless home.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">🛋️</div>
+              <h3>Sofa Cleaning</h3>
+              <p>Refresh upholstery and remove dust for a cleaner, healthier space.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon">💧</div>
+              <h3>Water Tank Cleaning</h3>
+              <p>Hygienic cleaning for safe water storage and better maintenance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="container">
+          <div class="section-title reveal">
+            <span>Why Choose Us</span>
+            <h2>Reliable service backed by professionalism and care</h2>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card reveal">
+              <h3>Trained Professionals</h3>
+              <p>Experienced cleaning staff who work with discipline, care, and efficiency.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Quality Focus</h3>
+              <p>We pay attention to detail so every corner looks fresh and well maintained.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Flexible Scheduling</h3>
+              <p>Choose recurring service or one-time support based on your convenience.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Responsive Team</h3>
+              <p>Quick communication and dependable support from booking through completion.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="container">
+          <div class="section-title reveal">
+            <span>Gallery</span>
+            <h2>Our team in action</h2>
+            <p>Here are a few highlights of our cleaning professionals in action, with a polished blue-uniform appearance suited to modern service environments.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-card reveal">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Cleaning professional in blue uniform at work" />
+              <div class="content">
+                <h3>Residential Cleaning</h3>
+                <p>Friendly and efficient support for flats, homes, and apartments.</p>
+              </div>
+            </article>
+            <article class="gallery-card reveal">
+              <img src="https://images.unsplash.com/photo-1521782462922-9318be1cfd04?auto=format&fit=crop&w=900&q=80" alt="Cleaning staff maintaining a modern office space" />
+              <div class="content">
+                <h3>Office Maintenance</h3>
+                <p>Professional care for corporate environments, meeting rooms, and shared zones.</p>
+              </div>
+            </article>
+            <article class="gallery-card reveal">
+              <img src="https://images.unsplash.com/photo-1585421519252-2b0f6e6d6a2a?auto=format&fit=crop&w=900&q=80" alt="Housekeeping staff handling common area cleaning" />
+              <div class="content">
+                <h3>Common Area Care</h3>
+                <p>Keeping lobbies, corridors, and shared spaces spotless and welcoming.</p>
+              </div>
+            </article>
+            <article class="gallery-card reveal">
+              <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Cleaning team with equipment and blue uniforms" />
+              <div class="content">
+                <h3>Deep Cleaning Service</h3>
+                <p>Reliable support for deeper cleaning needs across homes and commercial sites.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container contact-grid">
+          <div class="contact-card reveal">
+            <div class="section-title" style="margin-bottom: 0.8rem;">
+              <span>Contact</span>
+              <h2>Get in touch with Diya Cleaning Services</h2>
+            </div>
+            <p>For bookings, quotations, or service requests, reach out to us using the contact details below.</p>
+            <div class="contact-list">
+              <div>📞 <span>Phone: 9770010905</span></div>
+              <div>💬 <span>WhatsApp: 9039826765</span></div>
+              <div>📍 <span>Serving homes, apartments, offices, and shared spaces</span></div>
+            </div>
+          </div>
+
+          <div class="contact-card reveal">
+            <form>
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Your Email" />
+              <input type="tel" placeholder="Phone Number" />
+              <textarea placeholder="Tell us about your cleaning needs..."></textarea>
+              <button class="btn btn-primary" type="button">Request a Quote</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <p>© 2026 Diya Cleaning Services. All rights reserved.</p>
+        <p>Professional cleaning for homes, apartments, offices, and communities.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      menuToggle?.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach((link) => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>
