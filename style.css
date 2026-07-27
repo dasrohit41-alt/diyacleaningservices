@@ -1,57 +1,74 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
 }
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("hero.jpg") center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
+  height:100vh;
+  background:linear-gradient(135deg,#0f9b0f,#38ef7d);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.35);
 }
 
 .hero-content{
-animation:fadeUp 1.5s ease;
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
-font-size:55px;
-margin-bottom:20px;
+  font-size:60px;
+  margin-bottom:20px;
 }
 
 .hero p{
-font-size:22px;
-margin-bottom:30px;
+  font-size:22px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
-background:#00c853;
-padding:15px 35px;
-color:white;
-text-decoration:none;
-border-radius:50px;
-transition:.3s;
+  text-decoration:none;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:50px;
+  font-weight:bold;
 }
 
-.btn:hover{
-background:#009624;
-transform:scale(1.08);
+.call{
+  background:#0066ff;
 }
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(60px);
+.whatsapp{
+  background:#25D366;
 }
-to{
-opacity:1;
-transform:translateY(0);
-}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
 }
